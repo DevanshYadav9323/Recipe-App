@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Listing the recipes returned from the search -->
+<div class="container">
+    <h1>Search Results</h1>
+    <ul class="recipe-list">
+      <% recipes.forEach(recipe => { %>
+        <li>
+          <a href="/recipe/<%= recipe.id %>">
+            <div class="recipe-card">
+              <img class="recipe-image" src="<%= recipe.image %>" alt="<%= recipe.title %>">
+              <h2 class="recipe-title"><%= recipe.title %></h2>
+            </div>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+    <a href="/">Back to home</a>
+</div>
+</body>
+</html>

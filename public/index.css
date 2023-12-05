@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body {
+    font-family: "Georgia", "Times New Roman", Times, serif;
+    background-color: #f4f1ea;
+    /* background-color: red; */
+    height: 100vh;
+    width: 100vw;
+    color: #4c4c4c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search_container {
+    max-width: 800px;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;  
+    
+}
