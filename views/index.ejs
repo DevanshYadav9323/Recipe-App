@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style css -->
     <link rel="stylesheet" href="/index.css">
+    <!-- Unicons CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <title>Recipe App</title>
 </head>
+
 <body>
-    <div class="container" id="search_container">
-        <h1>Recipe Search</h1>
-        <form action="/search" method="POST">
-            <input type="text" name="query" placeholder="Search for a recipe ..." />
-            <button type="submit">Search</button>
+
+    <nav class="nav">
+        <a href="/" class="logo">How To <span>Chef</span> ?</a>
+        <form action="/search" method="post" autocomplete="off">
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+            <div class="search-box">
+                <button type="submit"><i class="uil uil-search search-icon" id="submit_icon"></i></button>
+                <input type="text" name="query" placeholder="Search here..." />
+                </button>
+            </div>
         </form>
-    </div>
+    </nav>
+
+    <script>
+
+        // Navigation bar animation
+        const nav = document.querySelector(".nav"),
+        searchIcon = document.querySelector("#searchIcon");
+
+        searchIcon.addEventListener("click", () => {
+            nav.classList.toggle("openSearch");
+            nav.classList.remove("openNav");
+            if (nav.classList.contains("openSearch")) {
+                return searchIcon.classList.replace("uil-search", "uil-times");
+            }
+            searchIcon.classList.replace("uil-times", "uil-search");
+        });
+        
+    </script>
 </body>
+
 </html>
