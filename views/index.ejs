@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="/index.css">
     <!-- Unicons CSS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
     <title>Recipe App</title>
 </head>
 
@@ -16,7 +21,7 @@
     <nav class="nav">
         <a href="/" class="logo">How To <span>Chef</span> ?</a>
         <form action="/search" method="post" autocomplete="off">
-        <i class="uil uil-search search-icon" id="searchIcon"></i>
+            <i class="uil uil-search search-icon" id="searchIcon"></i>
             <div class="search-box">
                 <button type="submit"><i class="uil uil-search search-icon" id="submit_icon"></i></button>
                 <input type="text" name="query" placeholder="Search here..." />
@@ -25,11 +30,41 @@
         </form>
     </nav>
 
+    <div class="sample"></div>
+    <footer>
+
+        <div class="footer">
+            <div class="row">
+                <a href="#" target="_blank"><i class="fa fa-code"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:#"><i class="fa fa-envelope"></i></a>
+                <a onclick="scrolltotop()"><i class="fa fa-arrow-up"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <p>Thank you for visting</p>
+                Designed and Developed by Devansh Yadav
+            </div>
+        </div>
+    </footer>
+
+
     <script>
 
         // Navigation bar animation
         const nav = document.querySelector(".nav"),
-        searchIcon = document.querySelector("#searchIcon");
+            searchIcon = document.querySelector("#searchIcon");
 
         searchIcon.addEventListener("click", () => {
             nav.classList.toggle("openSearch");
@@ -39,7 +74,15 @@
             }
             searchIcon.classList.replace("uil-times", "uil-search");
         });
-        
+
+
+        // Scroll to top
+        // When the user clicks on the button, scroll to the top of the document
+        function scrolltotop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
     </script>
 </body>
 
