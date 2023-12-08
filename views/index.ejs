@@ -18,6 +18,7 @@
 
 <body>
 
+    <div id="scroll-progress"></div>
     <nav class="nav">
         <a href="/" class="logo">How To <span>Chef</span> ?</a>
         <form action="/search" method="post" autocomplete="off">
@@ -62,9 +63,18 @@
 
     <script>
 
+        // Scroll progress bar
+        const scrollProgress = document.getElementById('scroll-progress');
+        const height =document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        window.addEventListener('scroll', () => {
+        const scrollTop =document.body.scrollTop || document.documentElement.scrollTop;
+        scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
+        });
+
+
         // Navigation bar animation
         const nav = document.querySelector(".nav"),
-            searchIcon = document.querySelector("#searchIcon");
+        searchIcon = document.querySelector("#searchIcon");
 
         searchIcon.addEventListener("click", () => {
             nav.classList.toggle("openSearch");
