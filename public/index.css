@@ -49,10 +49,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav {
-  position: fixed;
+  position: sticky;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
+  height: fit-content;
   padding: 15px 200px;
   background: #ffcc00;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -186,10 +188,142 @@ a {
   }
 }
 
+/* Hero Section */
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+
+  5% {
+    left: 0%;
+  }
+
+  10% {
+    left: -100%;
+  }
+
+  20% {
+    left: -100%;
+  }
+
+  30% {
+    left: -100%;
+  }
+
+  40% {
+    left: -100%;
+  }
+
+  50% {
+    left: -100%;
+  }
+
+  60% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  80% {
+    left: -200%;
+  }
+
+  90% {
+    left: -200%;
+  }
+
+  100% {
+    left: -200%;
+  }
+
+}
+
+
+.hero-wrapper {
+  display: flex;
+  column-gap: 10px;
+  height: calc(100vh - 63.6px);
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 560px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content h1 , p {
+  text-align: center;
+}
+
+.hero-content p {
+  padding-top: 20px;
+}
+
+div#slider {
+  overflow: hidden;
+  height: 560px;
+  width: 1000px;
+  border-radius: 10px;
+}
+
+div#slider figure img {
+  float: left;
+  height: 560px;
+  width: 1000px;
+}
+
+div#slider figure {
+  position: relative;
+  width: 400%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 60s slidy infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+
+
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+  
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) 
+  and (orientation: portrait) {
+  
+}
+
+.sample {
+  height: 100vh;
+  width: 100vw;
+}
+
 
 
 
 /* Footer Section */
+
 body{
   margin:0;
   overflow-x:hidden;
@@ -197,12 +331,6 @@ body{
 
   html{
       scroll-behavior: smooth;
-  }
-
-  .sample {
-      height: 100vh;
-      width: 100vw;
-      background-color: red;
   }
   
   .footer{
