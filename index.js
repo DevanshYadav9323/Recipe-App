@@ -15,6 +15,10 @@ const PORT = process.env.port;
 const API_KEY = process.env.spoonacular_api_key;
 
 
+// Set the views directory
+app.set('views', './views');
+
+
 // Setting the view for ejs 
 app.set("view engine" , "ejs");
 
