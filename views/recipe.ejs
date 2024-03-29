@@ -21,7 +21,7 @@
                 <li>
                     <%= ingredient.original %>
                 </li>
-            <% }) %>
+                <% }) %>
         </ul>
 
         <h2> Instructions</h2>
@@ -30,9 +30,71 @@
                 <li>
                     <%= step.step %>
                 </li>
-            <% }) %>
+                <% }) %>
         </ol>
+
+        <!-- Print and Share Buttons -->
+        <div class="buttons">
+            <button id="printButton">Print Recipe</button>
+            <button id="shareButton">Share Recipe Link</button>
+        </div>
+
     </div>
+
+    <script>
+        // JavaScript for printing and sharing recipe link
+        document.addEventListener('DOMContentLoaded', function () {
+            const printButton = document.getElementById('printButton');
+            const shareButton = document.getElementById('shareButton');
+
+            // Print the recipe when the print button is clicked
+            printButton.addEventListener('click', function () {
+
+                hideButtonsForPrinting();
+
+
+                window.print();
+            });
+
+            // Share the recipe link when the share button is clicked
+            shareButton.addEventListener('click', function () {
+
+                const recipeUrl = window.location.href;
+
+                // Use the Clipboard API to copy the URL to the clipboard
+                navigator.clipboard.writeText(recipeUrl)
+                    .then(() => {
+                        alert('Recipe link copied to clipboard!');
+                    })
+                    .catch((error) => {
+                        console.error('Failed to copy recipe link: ', error);
+                    });
+            });
+
+            // Function to hide the buttons before printing
+            function hideButtonsForPrinting() {
+                const buttons = document.querySelectorAll('.buttons button');
+                buttons.forEach(button => {
+                    button.style.display = 'none';
+                });
+            }
+
+            // Event listener for beforeprint event
+            window.addEventListener('beforeprint', function () {
+                hideButtonsForPrinting();
+            });
+
+            // Event listener for afterprint event
+            window.addEventListener('afterprint', function () {
+                const buttons = document.querySelectorAll('.buttons button');
+                buttons.forEach(button => {
+                    button.style.display = 'inline-block'; // Reappear the buttons after printing is canceled
+                });
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>

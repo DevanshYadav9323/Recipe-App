@@ -28,6 +28,14 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 
 
+// This is to test Internal Server Error handling , do not uncomment
+
+// app.use(internetconnection);
+// function internetconnection(req,res,next){
+//     throw new Error(500)
+// }
+
+
 // Declaring the routes 
 app.get("/" , (req , res) => {
     res.render("index")
@@ -39,6 +47,7 @@ app.post("/search" , async (req , res) => {
     const {query} = req.body;
     const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${API_KEY}`);
     const recipes = response.data.results;
+    console.log(recipes);
     res.render("results" , {recipes});
 });
 
@@ -48,8 +57,22 @@ app.get("/recipe/:id" , async (req , res) => {
     const {id} = req.params;
     const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`);
     const recipe = response.data;
+    console.log(recipe);
     res.render("recipe" , {recipe})
 });
+
+
+// Handling non matching request from the client
+app.use((req, res, next) => { 
+    res.status(404).render("404page")
+}) 
+
+// Internal server error middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack)
+    // res.status(500).send('Something broke!')
+    res.status(500).render("500page")
+})
 
 
 app.listen( PORT , ()=>{

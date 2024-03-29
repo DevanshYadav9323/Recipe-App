@@ -51,6 +51,16 @@
         
         <form action="/search" method="post">
             <h1 id="card-carousel-title">Quick Search By Country</h1>
+            <!-- <select id="dietaryPreference" name="dietaryPreference">
+                <option value="">Dietary Preference</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="nonVegetarian">Non-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="jain">Jain</option>
+                <option value="dairyFree">Dairy-Free</option>
+                <option value="glutenFree">Gluten-Free</option>
+                <option value="sugarFree">Sugar-Free</option>
+            </select> -->
             <div id="quick-search-country">
             <div class="wrapper">
                 <i id="left" class="fa fa-chevron-left"></i>
@@ -58,7 +68,7 @@
                         <button type="submit" name="query" value="Indian" class="form-button">
                             <li class="card">
                                 <div class="img"><img
-                                        src="https://img.freepik.com/free-vector/illustration-india-flag_53876-27130.jpg?size=626&ext=jpg&ga=GA1.1.1222169770.1702166400&semt=ais"
+                                        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
                                         alt="img" draggable="false"></div>
                                 <h2>Indian</h2>
                             </li>
@@ -101,6 +111,66 @@
                                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/1200px-Bandera_de_Espa%C3%B1a.svg.png"
                                         alt="img" draggable="false"></div>
                                 <h2>Spanish</h2>
+                            </li>
+                        </button>
+                    </ul>
+                </form>
+                <i id="right" class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <form action="/search" method="post">
+            <h1 id="card-carousel-title">Quick Search By Popular Dish</h1>
+            <div id="quick-search-popular-dish">
+            <div class="wrapper">
+                <i id="left" class="fa fa-chevron-left"></i>
+                    <ul class="carousel">
+                        <button type="submit" name="query" value="Pizza" class="form-button">
+                            <li class="card">
+                                <div class="img"><img
+                                        src="https://img.freepik.com/free-photo/freshly-baked-pizza-rustic-wooden-table-generated-by-ai_24640-80691.jpg?t=st=1702475493~exp=1702479093~hmac=0e4945a1174be45cbdb53a40973f73c8826884302928e17719568c0683c1cf39&w=1060"
+                                        alt="img" draggable="false"></div>
+                                <h2>Pizza</h2>
+                            </li>
+                        </button>
+                        <button type="submit" name="query" value="Burger" class="form-button">
+                            <li class="card">
+                                <div class="img"><img
+                                        src="https://img.freepik.com/free-photo/grilled-cheeseburger-with-tomato-onion-fries-generated-by-ai_188544-43039.jpg?t=st=1702475546~exp=1702479146~hmac=b2c638ef0cf07c66465a2bf4bd29c1ac8aae7ec18b9fd1ccbee635818045f8ca&w=1060"
+                                        alt="img" draggable="false"></div>
+                                <h2>Burger</h2>
+                            </li>
+                        </button>
+                        <button type="submit" name="query" value="Pasta" class="form-button">
+                            <li class="card">
+                                <div class="img"><img
+                                        src="https://img.freepik.com/free-photo/fresh-vegetarian-pasta-meal-rustic-wooden-table-generated-by-ai_188544-37366.jpg?t=st=1702475151~exp=1702478751~hmac=d6445ff8e6953dd16be4bae5e9b61ae49fb6951e713c8ae274aa20e0b54a0fa6&w=1060"
+                                        alt="img" draggable="false"></div>
+                                <h2>Pasta</h2>
+                            </li>
+                        </button>
+                        <button type="submit" name="query" value="Cake" class="form-button">
+                            <li class="card">
+                                <div class="img"><img
+                                        src="https://img.freepik.com/free-photo/freshly-baked-homemade-berry-pie-rustic-wood-generated-by-ai_188544-33406.jpg?w=1060&t=st=1702475273~exp=1702475873~hmac=1ae6a2fadbbcd1fb19febff8e75df74c3f922502da23f97329c52165647575cd"
+                                        alt="img" draggable="false"></div>
+                                <h2>Cake</h2>
+                            </li>
+                        </button>
+                        <button type="submit" name="query" value="Milkshake" class="form-button">
+                            <li class="card">
+                                <div class="img"><img
+                                        src="https://img.freepik.com/free-photo/creamy-chocolate-dessert-abstract-background-generative-ai_188544-12272.jpg?w=1060&t=st=1702475359~exp=1702475959~hmac=329393f478d17813db7c8747fba8ceff3d57a476dba8702ca60c2632f2e52d9e"
+                                        alt="img" draggable="false"></div>
+                                <h2>Milkshake</h2>
+                            </li>
+                        </button>
+                        <button type="submit" name="query" value="Lemon Soda" class="form-button">
+                            <li class="card">
+                                <div class="img"><img
+                                        src="https://img.freepik.com/free-photo/refreshing-mojito-cocktail-with-lime-mint-leaf-citrus-fruit-generated-by-artificial-intelligence_25030-63424.jpg?t=st=1702475219~exp=1702478819~hmac=fe1e67af834ec63614710d691785e3fad29cb42b785b4d97fc35a7a235f95a7b&w=1060"
+                                        alt="img" draggable="false"></div>
+                                <h2>Lemon Soda</h2>
                             </li>
                         </button>
                     </ul>
@@ -273,20 +343,20 @@
 
         <div class="footer">
             <div class="row">
-                <a href="#" target="_blank"><i class="fa fa-code"></i></a>
-                <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:#"><i class="fa fa-envelope"></i></a>
+                <a href="https://github.com/DevanshYadav9323/Recipe-App" target="_blank"><i class="fa fa-code"></i></a>
+                <a href="https://www.linkedin.com/in/devanshyadav9323/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/DevanshYadav9323" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:devanshyadav9323@gmail.com"><i class="fa fa-envelope"></i></a>
                 <a onclick="scrolltotop()"><i class="fa fa-arrow-up"></i></a>
             </div>
 
             <div class="row">
                 <ul>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Career</a></li>
+                    <li><a href="https://github.com/DevanshYadav9323/Recipe-App" target="_blank">Source Code</a></li>
+                    <li><a href="https://www.linkedin.com/in/devanshyadav9323/" target="_blank">Linkedin</a></li>
+                    <li><a href="https://github.com/DevanshYadav9323" target="_blank">Github</a></li>
+                    <li><a href="mailto:devanshyadav9323@gmail.com" target="_blank">Mail</a></li>
+                    <li><a onclick="scrolltotop()">Scroll To Top</a></li>
                 </ul>
             </div>
 
@@ -323,91 +393,93 @@
         });
 
 
-        // Quick Search card carousel animation
-        const wrapper = document.querySelector(".wrapper");
-        const carousel = document.querySelector(".carousel");
-        const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-        const arrowBtns = document.querySelectorAll(".wrapper i");
-        const carouselChildrens = [...carousel.children];
+  // Quick Search card carousel animation
+const carousels = document.querySelectorAll(".carousel");
+carousels.forEach(carousel => {
+    const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+    const arrowBtns = carousel.parentElement.querySelectorAll(".fa-chevron-left, .fa-chevron-right");
+    const carouselChildrens = [...carousel.children];
 
-        let isDragging = false, isAutoPlay = false, startX, startScrollLeft, timeoutId;
+    let isDragging = false, isAutoPlay = false, startX, startScrollLeft, timeoutId;
 
-        // Get the number of cards that can fit in the carousel at once
-        let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+    // Get the number of cards that can fit in the carousel at once
+    let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
 
-        // Insert copies of the last few cards to beginning of carousel for infinite scrolling
-        carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+    // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+    carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+        carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+    });
+
+    // Insert copies of the first few cards to end of carousel for infinite scrolling
+    carouselChildrens.slice(0, cardPerView).forEach(card => {
+        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+    });
+
+    // Scroll the carousel at appropriate position to hide first few duplicate cards on Firefox
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+
+    // Add event listeners for the arrow buttons to scroll the carousel left and right
+    arrowBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            carousel.scrollLeft += btn.classList.contains("fa-chevron-left") ? -firstCardWidth : firstCardWidth;
         });
+    });
 
-        // Insert copies of the first few cards to end of carousel for infinite scrolling
-        carouselChildrens.slice(0, cardPerView).forEach(card => {
-            carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-        });
+    const dragStart = (e) => {
+        isDragging = true;
+        carousel.classList.add("dragging");
+        // Records the initial cursor and scroll position of the carousel
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+    }
 
-        // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
+    const dragging = (e) => {
+        if (!isDragging) return; // if isDragging is false return from here
+        // Updates the scroll position of the carousel based on the cursor movement
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+    }
 
-        // Add event listeners for the arrow buttons to scroll the carousel left and right
-        arrowBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
-            });
-        });
+    const dragStop = () => {
+        isDragging = false;
+        carousel.classList.remove("dragging");
+    }
 
-        const dragStart = (e) => {
-            isDragging = true;
-            carousel.classList.add("dragging");
-            // Records the initial cursor and scroll position of the carousel
-            startX = e.pageX;
-            startScrollLeft = carousel.scrollLeft;
+    const infiniteScroll = () => {
+        // If the carousel is at the beginning, scroll to the end
+        if (carousel.scrollLeft === 0) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+            carousel.classList.remove("no-transition");
+        }
+        // If the carousel is at the end, scroll to the beginning
+        else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
         }
 
-        const dragging = (e) => {
-            if (!isDragging) return; // if isDragging is false return from here
-            // Updates the scroll position of the carousel based on the cursor movement
-            carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-        }
+        // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+        clearTimeout(timeoutId);
+        if (!carousel.parentElement.matches(":hover")) autoPlay();
+    }
 
-        const dragStop = () => {
-            isDragging = false;
-            carousel.classList.remove("dragging");
-        }
+    const autoPlay = () => {
+        if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+        // Autoplay the carousel after every 2500 ms
+        timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+    }
+    autoPlay();
 
-        const infiniteScroll = () => {
-            // If the carousel is at the beginning, scroll to the end
-            if (carousel.scrollLeft === 0) {
-                carousel.classList.add("no-transition");
-                carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
-                carousel.classList.remove("no-transition");
-            }
-            // If the carousel is at the end, scroll to the beginning
-            else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
-                carousel.classList.add("no-transition");
-                carousel.scrollLeft = carousel.offsetWidth;
-                carousel.classList.remove("no-transition");
-            }
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("scroll", infiniteScroll);
+    carousel.parentElement.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+    carousel.parentElement.addEventListener("mouseleave", autoPlay);
+});
 
-            // Clear existing timeout & start autoplay if mouse is not hovering over carousel
-            clearTimeout(timeoutId);
-            if (!wrapper.matches(":hover")) autoPlay();
-        }
-
-        const autoPlay = () => {
-            if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
-            // Autoplay the carousel after every 2500 ms
-            timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
-        }
-        autoPlay();
-
-        carousel.addEventListener("mousedown", dragStart);
-        carousel.addEventListener("mousemove", dragging);
-        document.addEventListener("mouseup", dragStop);
-        carousel.addEventListener("scroll", infiniteScroll);
-        wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-        wrapper.addEventListener("mouseleave", autoPlay);
     
 
         // Accordian animation

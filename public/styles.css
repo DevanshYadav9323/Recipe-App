@@ -1,14 +1,17 @@
 
 body {
-    font-family: "Georgia", "Times New Roman", Times, serif;
-    background-color: #f4f1ea;
+    /* font-family: "Georgia", "Times New Roman", Times, serif; */
+    font-family: "Poppins", sans-serif;
+    /* background-color: #f4f1ea; */
+    background-color: #f0faff;
     color: #4c4c4c;
     margin: 0;
     padding: 0;
   }
   
   .container {
-    max-width: 800px;
+    /* max-width: 800px; */
+    max-width: 100vw;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -28,7 +31,8 @@ body {
   
   input,
   button {
-    font-family: "Georgia", "Times New Roman", Times, serif;
+    /* font-family: "Georgia", "Times New Roman", Times, serif; */
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     margin: 5px;
   }
@@ -68,8 +72,10 @@ body {
   .recipe-image {
     width: 100%;
     height: auto;
+    object-fit: cover;
     margin-bottom: 10px;
     border-radius: 5px;
+    border: 2px solid #000;
   }
   
   a {
@@ -83,3 +89,80 @@ body {
   a:hover {
     text-decoration: underline;
   }
+
+
+  .recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted to a minimum width of 250px */
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For tablets and larger devices */
+    .recipe-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    /* For desktop */
+    .recipe-list {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    }
+  }
+
+
+  .container {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 5px solid #000;
+}
+
+ul {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ol {
+    text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For smaller devices */
+    h1 {
+        font-size: 28px;
+    }
+
+    ul,
+    ol {
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+}
+
+  
